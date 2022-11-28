@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "soncomp"
+version = "0.1.0"
+description = "Transcode a directory of song files into another format"
+authors = ["B. Howe <37745048+byhowe@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+soncomp = "soncomp.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
