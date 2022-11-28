@@ -91,7 +91,9 @@ def main():
         flacs = list(flacs)
         for i, flac in enumerate(flacs, start=1):
             print(f"[{i}/{len(flacs)}] {flac.split('/')[-1]}")
-            subprocess.run(tc.command(flac, flac.replace(".flac", ".ogg")))
+            out = flac.replace(".flac", ".ogg")
+            subprocess.run(tc.command(flac, out))
+            os.remove(flac)
 
 
 if __name__ == "__main__":
